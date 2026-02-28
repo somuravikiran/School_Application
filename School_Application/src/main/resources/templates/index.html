@@ -18,7 +18,7 @@ Author URL: http://w3layouts.com
 
 <body>
     <!--header-->
-    <div th:replace="header :: header"></div>
+    <div th:replace="~{header :: header}"></div>
     <!--/header-->
     <!--/Banner-Start-->
     <section class="bannerw3l-hnyv">
@@ -47,15 +47,8 @@ Author URL: http://w3layouts.com
                     <h4 class="title text-center">
                         <span>Apply for admission</span>
                     </h4>
-                    <div class="caption text-center mb-2">
-                        Make it more simple!
-                    </div>
                     <div class="apply-form">
-                        <form action="#" class="" method="post">
-                            <input type="text" name="text" placeholder="Your Name" required="">
-                            <input type="email" name="email" placeholder="Your Email" required="">
-                            <button class="btn btn-style btn-primary">Apply Now</button>
-                        </form>
+                            <a th:href="@{/contact}" class="btn btn-style btn-primary">Apply Now</a>
                     </div>
                 </div>
             </div>
@@ -110,7 +103,7 @@ Author URL: http://w3layouts.com
                         <h3 class="title-w3l">Find courses on almost any <span class="inn-text">Topic</span></h3>
                         <h6 class="mt-md-4 mt-md-5 mt-4">Build your library for your career
                             <br>and personal growth</h6>
-                        <a th:href="about" href="about.html" class="btn btn-style btn-primary mt-lg-5 mt-4">View Courses</a>
+                        <a th:href="@{/about}" href="about.html" class="btn btn-style btn-primary mt-lg-5 mt-4">Meet Our Teachers</a>
                     </div>
                     <div class="HomeAboutImages col-lg-6 mt-lg-0 mt-5 pl-lg-5">
                         <div class="cwp23-text-cols row">
@@ -347,7 +340,7 @@ Author URL: http://w3layouts.com
                         </div>
                     </div>
                     <div class="mt-5 mx-auto text-more text-center pt-lg-4">
-                        <a href="courses.html" class="btn btn-style btn-primary">View All Courses</a>
+                        <a th:href="@{/courses}" href="courses.html" class="btn btn-style btn-primary">View All Courses</a>
                     </div>
                 </div>
             </div>
@@ -455,7 +448,7 @@ Author URL: http://w3layouts.com
     </section>
     <!--//subscribe-->
     <!--/footer-->
-    <div th:replace="footer :: footer"></div>
+    <div th:replace="~{footer :: footer}"></div>
     <!-- //footer -->
 
     <!-- Js scripts -->
