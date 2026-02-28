@@ -12,3 +12,14 @@ CREATE TABLE IF NOT EXISTS contact_msg (
     updated_at  TIMESTAMP    DEFAULT NULL,
     updated_by  VARCHAR(50)  DEFAULT NULL
     );
+
+
+CREATE TABLE IF NOT EXISTS HOLIDAYS(
+    day VARCHAR(20) NOT NULL,
+    reason VARCHAR(100) NOT NULL,
+    type VARCHAR(20) NOT NULL,
+    created_at TIMESTAMP NOT NULL,
+    created_by VARCHAR(50) NOT NULL,
+    updated_at TIMESTAMP DEFAULT NULL,
+    updated_by VARCHAR(50) DEFAULT NULL
+)
