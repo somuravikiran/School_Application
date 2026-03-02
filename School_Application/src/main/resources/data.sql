@@ -1,5 +1,5 @@
 INSERT INTO HOLIDAYS(day, reason, type, created_at, created_by)
-values (' Jan 1', 'New Year''s Day','FESTIVAL',CURRENT_DATE,'DBA'),
+values ('Jan 1', 'New Year''s Day','FESTIVAL',CURRENT_DATE,'DBA'),
        ('Oct 31','Halloween','FESTIVAL',current_date,'DBA'),
        ('Nov 24','Thanksgiving Day','FESTIVAL',current_date,'DBA'),
        ('DEC 25','Christmas','FESTIVAL',current_date,'DBA'),

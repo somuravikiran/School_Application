@@ -1,7 +1,12 @@
 package com.greetlabs.School_Application.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.Data;
+
 import java.lang.reflect.Type;
 
+@Data
 public class Holiday {
     private final String day;
     private final String reason;
