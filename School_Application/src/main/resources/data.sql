@@ -1,8 +1,9 @@
-INSERT INTO HOLIDAYS(day, reason, type, created_at, created_by)
-values ('Jan 1', 'New Year''s Day','FESTIVAL',CURRENT_DATE,'DBA'),
-       ('Oct 31','Halloween','FESTIVAL',current_date,'DBA'),
-       ('Nov 24','Thanksgiving Day','FESTIVAL',current_date,'DBA'),
-       ('DEC 25','Christmas','FESTIVAL',current_date,'DBA'),
-       ('Jan 17','Martin Luther King Jr. Day','FEDRAL',current_date,'DBA'),
-       ('July 4','Independence Day','FEDRAL',current_date,'DBA'),
-       ('Sep 5', 'Labor Day','FEDRAL',CURRENT_DATE,'DBA');
+INSERT INTO holidays(holiday_date, reason, holiday_type, created_at, created_by)
+VALUES
+    ('Jan 1',  'New Year''s Day',            'FESTIVAL', CURRENT_DATE, 'DBA'),
+    ('Oct 31', 'Halloween',                  'FESTIVAL', CURRENT_DATE, 'DBA'),
+    ('Nov 24', 'Thanksgiving Day',           'FESTIVAL', CURRENT_DATE, 'DBA'),
+    ('Dec 25', 'Christmas',                  'FESTIVAL', CURRENT_DATE, 'DBA'),
+    ('Jan 17', 'Martin Luther King Jr. Day', 'FEDERAL',  CURRENT_DATE, 'DBA'),
+    ('July 4', 'Independence Day',           'FEDERAL',  CURRENT_DATE, 'DBA'),
+    ('Sep 5',  'Labor Day',                  'FEDERAL',  CURRENT_DATE, 'DBA');

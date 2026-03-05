@@ -25,7 +25,7 @@ public class ProjectSecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/h2-console", "/h2-console/**").permitAll()
                         .requestMatchers("/", "/home").permitAll()
-                        .requestMatchers("/holidays", "/courses", "/about", "/contact", "/saveMsg").permitAll()
+                        .requestMatchers("/holidays/**", "/courses", "/about", "/contact", "/saveMsg").permitAll()
                         .requestMatchers("/login", "/logout").permitAll()
                         .requestMatchers("/assets/**").permitAll()
                         .requestMatchers("/closeMsg/**").hasRole("ADMIN")

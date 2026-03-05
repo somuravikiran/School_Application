@@ -1,38 +1,26 @@
 package com.greetlabs.School_Application.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
-
-import java.lang.reflect.Type;
-
 @Data
-public class Holiday {
-    private final String day;
-    private final String reason;
-    private final Type type;
+@Entity
+@Table(name = "holidays")
+public class Holiday extends BaseEntity {
 
-    public enum Type{
-        FESTIVAL,FEDERAL
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "holiday_date")
+    private String holidayDate;
+
+    private String reason;
+
+    @Column(name = "holiday_type")
+    @Enumerated(EnumType.STRING)
+    private Type holidayType;
+
+    public enum Type {
+        FESTIVAL, FEDERAL
     }
-
-    public Holiday(String day, String reason, Type type) {
-        this.day = day;
-        this.reason = reason;
-        this.type = type;
-    }
-
-    public String getDay() {
-        return day;
-    }
-
-    public String getReason() {
-        return reason;
-    }
-
-    public Type getType() {
-        return type;
-    }
-
-
 }

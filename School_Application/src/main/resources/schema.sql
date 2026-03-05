@@ -14,12 +14,13 @@ CREATE TABLE IF NOT EXISTS contact_msg (
     );
 
 
-CREATE TABLE IF NOT EXISTS HOLIDAYS(
-    day VARCHAR(20) NOT NULL,
-    reason VARCHAR(100) NOT NULL,
-    type VARCHAR(20) NOT NULL,
-    created_at TIMESTAMP NOT NULL,
-    created_by VARCHAR(50) NOT NULL,
-    updated_at TIMESTAMP DEFAULT NULL,
-    updated_by VARCHAR(50) DEFAULT NULL
-)
+CREATE TABLE IF NOT EXISTS holidays(
+    id           BIGINT AUTO_INCREMENT PRIMARY KEY,
+    holiday_date VARCHAR(20) NOT NULL,
+    reason       VARCHAR(100) NOT NULL,
+    holiday_type VARCHAR(20) NOT NULL,
+    created_at   TIMESTAMP NOT NULL,
+    created_by   VARCHAR(50) NOT NULL,
+    updated_at   TIMESTAMP DEFAULT NULL,
+    updated_by   VARCHAR(50) DEFAULT NULL
+    );
